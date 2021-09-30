@@ -1,4 +1,4 @@
-package serie02;
+package serie2;
 
 public class HelloWorld {
 	public static void main(String [] args) {
