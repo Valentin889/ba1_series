@@ -18,5 +18,6 @@ public class IMC {
     	
     	System.out.println("Pour "+poids+" kg et "+taille+" m l'IMC est de "+imc);
     	
+    	scanner.close();
     }
 }
