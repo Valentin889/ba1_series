@@ -17,7 +17,12 @@ public class Degre3 {
 		System.out.print("Entrer x (double) : ");
 		double x = scanner.nextDouble();
 		
-		double poly = ((a+b)/2)*Math.pow(x, 3) + Math.pow((a+b),2)*Math.pow(x, 2) + a + b + c;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(x);
+		
+		double poly = ((a+b)/2.0)*Math.pow(x, 3) + Math.pow((a+b),2)*Math.pow(x, 2) + a + b + c;
 		//poly = ((a+b)/2)*x*x*x + ((a+b)*(a+b)*x*x) + a + b + c;
 		
 		System.out.println("la valueur du polynôme est : "+poly);
