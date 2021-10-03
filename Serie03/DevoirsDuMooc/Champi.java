@@ -1,5 +1,3 @@
-package Serie03.DevoirsDuMooc;
-
 import java.util.Scanner;
 
 public class Champi {

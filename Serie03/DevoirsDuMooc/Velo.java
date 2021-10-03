@@ -1,5 +1,3 @@
-package Serie03.DevoirsDuMooc;
-
 import java.util.Scanner;
 
 public class Velo {
@@ -15,35 +13,46 @@ public class Velo {
          * Completez le programme a partir d'ici.
          *******************************************/
 
-        //Par choix, j'ai décidé de laisser plusieurs erreurs s'afficher d'un coup
-        //le cas échéant. Il suffirait d'ajouter des "else" pour éviter plusieurs erreurs
-        if (debut < 0 || fin > 24) {
+        if (debut < 0 || debut > 24 || fin > 24 || fin < 0) {
             System.out.println("Les heures doivent être comprises entre 0 et 24 !");
         }
-        if (debut > fin) {
+        else if (debut > fin) {
             System.out.println("Bizarre, le début de la location est après la fin ...");
         }
-        if (debut == fin) {
+        else if (debut == fin) {
             System.out.println("Bizarre, vous n'avez pas loué votre vélo bien longtemps !");
         }
+        else {
 
-        //Calculer le prix total
-        int montant = 0;
-        //On va boucler de l'heure de début jusqu'à l'heure de fin
-        //Pour chaque heure, on va regarder dans quelle plage horaire elle se trouve
-        //et ajouter le prix correspondant
-        for (int i = debut; i < fin; ++i) {
-            if (i < 7 || i >= 17) {
-                montant += 1;
+            //Calculer le prix total
+            int montant = 0;
+            //Calculer les heures au tarif réduit
+            int unFranc = 0;
+            //Calculer les heures au tarif élevé
+            int deuxFrancs = 0;
+            //On va boucler de l'heure de début jusqu'à l'heure de fin
+            //Pour chaque heure, on va regarder dans quelle plage horaire elle se trouve
+            //et ajouter le prix correspondant
+            for (int i = debut; i < fin; ++i) {
+                if (i < 7 || i >= 17) {
+                    montant += 1;
+                    unFranc++;
+                }
+                else { //if (i > 7 && i < 17)
+                    montant += 2;
+                    deuxFrancs++;
+                }
             }
-            else { //if (i > 7 && i < 17)
-                montant += 2;
+
+            System.out.println("Vous avez loué votre vélo pendant");
+            if (unFranc != 0) {
+                System.out.println(unFranc + " heure(s) au tarif horaire de 1.0 franc(s)");
             }
+            if (deuxFrancs != 0) {
+                System.out.println(deuxFrancs + " heure(s) au tarif horaire de 2.0 franc(s)");
+            }
+            System.out.println("Le montant total à payer est de " + montant + ".0 franc(s).");
         }
-
-        System.out.println("Vous avez loué votre vélo pendant " + (fin - debut) + "h");
-        System.out.print("Le montant total à payer est de " + montant);
-        System.out.println(" franc(s).");
 
         /*******************************************
          * Ne rien modifier apres cette ligne.
