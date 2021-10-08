@@ -2,7 +2,7 @@ package serie3;
 import java.util.Scanner;
 
 
-public class pair_impair {
+public class Pair_impair {
 	public static void main (String args[]) {
 		
 		Scanner scanner = new Scanner(System.in);
