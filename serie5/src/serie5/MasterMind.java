@@ -16,7 +16,7 @@ public class MasterMind {
 		
 		int[] laCombinaison = new int[n];
 		int[] combinaison = new int[n];
-		int[] reponse = new int[2];
+		int[] reponse;
 		
 		laCombinaison[0] = 1;
 		laCombinaison[1] = 2;
@@ -28,25 +28,30 @@ public class MasterMind {
 		combinaison[2] = 0;
 		combinaison[3] = 1;
 		
-		//tirerCombinaison(laCombinaison);
+		tirerCombinaison(laCombinaison);
 		
-		
-		demanderCoup(combinaison);
-		
-		
-		
-		boolean val = compare(laCombinaison, combinaison, reponse);
-		for (int i = 0; i < reponse[0]; i++) {
-			System.out.print("#");
-		}
-		System.out.println("");
-		
-		for (int i = 0; i < reponse[1]; i++) {
-			System.out.print("0");
-		}
+		do {
+			
+			reponse = new int[2];
+			
+			demanderCoup(combinaison);
+			
+			boolean val = compare(laCombinaison, combinaison, reponse);
+			for (int i = 0; i < reponse[0]; i++) {
+				System.out.print("#");
+			}
+			System.out.println("");
+			
+			for (int i = 0; i < reponse[1]; i++) {
+				System.out.print("0");
+			}
+			System.out.println("");
 				
 		
+		}while(reponse[0] != n);
 		
+		
+		System.out.println("Bien joué!!!");
 		
 	}
 	
