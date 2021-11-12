@@ -1,7 +1,5 @@
 package serie7;
 
-import java.util.Iterator;
-
 public class Triange {
 	private Point[] points;
 	
