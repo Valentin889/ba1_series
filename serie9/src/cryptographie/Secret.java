@@ -1,3 +1,4 @@
+package cryptographie;
 import java.util.Random;
 
 
@@ -20,7 +21,6 @@ class Secret {
 		String cryptage;
 
 		// PARTIES A DECOMMENTER AU FUR ET A MESURE SELON l'ENONCE
-		/*
 		// TEST A CLE
 		Code acle1 = new ACle("a cle", "EQUINOXE");
 		System.out.print("Avec le code : " );
@@ -33,6 +33,7 @@ class Secret {
 		System.out.println("-----------------------------------");
 		System.out.println();
 		// FIN TEST A CLE
+		/*
         */
 		/*
 		// TEST A CLE ALEATOIRE
