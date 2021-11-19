@@ -35,7 +35,6 @@ class Secret {
 		// FIN TEST A CLE
 		/*
         */
-		/*
 		// TEST A CLE ALEATOIRE
 		Code acle2 = new ACleAleatoire(5);
 		System.out.print("Avec le code : " );
@@ -48,6 +47,7 @@ class Secret {
 		System.out.println("-----------------------------------");
 		System.out.println();
 		// FIN TEST A CLE ALEATOIRE 
+		/*
 		*/
 		/*
 		// TEST CESAR

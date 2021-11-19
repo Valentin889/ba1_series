@@ -15,6 +15,10 @@ public class ACle extends Code{
 		cle = c;
 	}
 	
+	public ACle(String nom) {
+		super(nom);
+	}
+	
 	
 	@Override
 	public String code(String s) {
@@ -82,4 +86,13 @@ public class ACle extends Code{
 		
 		return valReturn;
 	}
+
+	public void setCle(String c) {
+		cle = c;
+	}
+	
+	public void affiche() {
+		System.out.println(cle);
+	}
+
 }
